@@ -29,22 +29,7 @@ gulp.task('default', function() {
     });
 });
 
-gulp.task('css', function() {
+gulp.task('build', function() {
     return gulp.src(['./app/css/*.css', './app/*.php', './app/*.html', './app/*.js'], {base: './app'})
       .pipe(gulp.dest('./dest/'));
-});
-gulp.task('php', function() {
-    return gulp.src('./app/*.php')
-      .pipe(gulp.dest('./dest/'));
-});
-gulp.task('html', function() {
-    return gulp.src('./app/*.html')
-      .pipe(gulp.dest('./dest/'));
-});
-gulp.task('js', function() {
-    return gulp.src('./app/*.js')
-      .pipe(gulp.dest('./dest/'));
-});
-gulp.task('build', function() {
-    // content
 });
