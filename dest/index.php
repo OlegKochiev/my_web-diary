@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="header">
-        
+        <a href="createtask.html">Создать задачу</a>
     </header>
 
     <main class="main">
@@ -17,13 +17,24 @@
             require_once('core.php');
 
             $queryArr = getDatas();
-            //var_dump($queryArr);
             foreach($queryArr as $mas){
-                //var_dump($mas);
         ?>
 
         <div class="task wrapper">
             <div class="date-theme">
+
+                <div class="theme">
+                    <span>
+                        <?
+                            echo '#id:'.$mas['id    ']
+                        ?>
+                    </span>
+                    <span>
+                        <? 
+                            echo ' Тема: '.$mas['theme']
+                        ?>
+                    </span>
+                </div>
                 <div class="date">
                     <span>
                         <?php 
@@ -32,14 +43,7 @@
                     </span>
                 </div>
 
-                <div class="theme">
-                    <span>
-                        <? 
-                            echo $mas['theme']
-                        ?>
-                    </span>
-                    
-                </div>
+
             </div>
     
             <div class="task-description">
