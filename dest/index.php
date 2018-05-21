@@ -13,20 +13,30 @@
     </header>
 
     <main class="main">
+        <?php
+            require_once('core.php');
+
+            $queryArr = getDatas();
+            //var_dump($queryArr);
+            foreach($queryArr as $mas){
+                //var_dump($mas);
+        ?>
 
         <div class="task wrapper">
             <div class="date-theme">
                 <div class="date">
                     <span>
                         <?php 
-                            echo date("d M Y H:i:s");
+                            echo $mas['date'];
                         ?>
                     </span>
                 </div>
 
                 <div class="theme">
                     <span>
-                        <?php echo "Тема:"?>
+                        <? 
+                            echo $mas['theme']
+                        ?>
                     </span>
                     
                 </div>
@@ -34,28 +44,33 @@
     
             <div class="task-description">
                 <p>
-                    <?php echo "Task description!!"?>
+                    <? 
+                        echo $mas['description']
+                    ?>
                 </p>
             </div>
 
             <div class="keywords">
                 <ol>
-                    <li>PHP7</li>
-                    <li>HTML5</li>
-                    <li>CSS</li>
-                    <li>JS</li>
+                    <li>
+                        <?
+                            echo $mas['keywords'];
+                        ?>
+                    </li>
                 </ol>
             </div>
             <div class="keyfunctions">
                 <ul>
-                    implode(),
-                    explode(),
-                    serialize(),
-                    unserialize().
+                    <?
+                        echo $mas['keyfunctions'];
+                    ?>
                 </ul>
             </div>
-        </div>
 
+        </div>
+    <?
+        }
+    ?>
 
     </main>
 

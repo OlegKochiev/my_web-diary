@@ -10,7 +10,7 @@
 <body>
 
     <main class="main">
-        <form action="" method="post" class="form wrapper">
+        <form action="createtask.php" method="post" class="form wrapper">
             <div class="theme">
                 <label for="theme">
                     Тема:
@@ -26,19 +26,16 @@
                 <textarea name="task-description"  placeholder="Опишите задачу" id="" value=""></textarea>
             </div>
             <div class="keyfunctions">
-                <label for=""></label>
+                <label for="theme">
+                    Ключевые навыки:
+                </label>
+                <input type="text" name="keyfunctions" id="" placeholder="Введите изученные функции и технологии, например: explode()">
             </div>
-            <div class="keywords">
-                <label for="chooseKeywords">
-                    Ключевое слово:
+            <div class="choosekeywords">
+                <label for="keywords">
+                    Ключевые слова:
                 </label>
-                <select name="chooseKeywords[]" id="">
-                    <option value="" hidden disabled selected>Выбрать</option>
-                    <option value="">keyword</option>
-                </select>
-                <label for="chooseKeywords">
-                    Выбранные слова: PHP7
-                </label>
+                <input type="text" name="keywords" id="" placeholder="Введите ключевые слова, например: git, php5.3, mysql">
             </div>
             <input type="submit" value="Отправить">
         </form>

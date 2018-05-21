@@ -3,8 +3,7 @@
   margin: 0; }
 
 .main {
-  width: 100%;
-  height: 100%; }
+  width: 100%; }
 
 .wrapper {
   width: 88vw;
@@ -16,19 +15,11 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-end; }
-  .form .theme input {
-    margin-bottom: 20px;
-    padding: 2px 5px;
-    width: 700px;
-    height: 30px;
-    border: none;
-    border-radius: 3px;
-    background-color: #f1f1f1;
-    outline: 0; }
   .form .task-description {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    margin-bottom: 20px; }
     .form .task-description textarea {
       padding: 2px 5px;
       width: 700px;
@@ -39,23 +30,16 @@
       border-radius: 3px;
       font-family: tahoma;
       resize: none; }
-  .form .keywords {
-    margin-left: 76px;
-    margin-top: 20px;
-    align-self: flex-start;
-    display: flex;
-    flex-direction: row;
-    align-items: center; }
-    .form .keywords select {
-      margin-right: 10px;
-      padding: 3px;
-      border: none;
-      background-color: #f1f1f1;
-      height: 30px;
-      border-radius: 4px;
-      outline: none; }
+  .form .keyfunctions input, .form .choosekeywords input, .form .theme input {
+    margin-bottom: 20px;
+    padding: 2px 5px;
+    width: 700px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    background-color: #f1f1f1;
+    outline: 0; }
   .form input[type='submit'] {
-    margin-top: 20px;
     padding: 7px 7px;
     border: none;
     border-radius: 3px;

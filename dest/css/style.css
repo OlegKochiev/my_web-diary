@@ -14,10 +14,12 @@
   margin-top: 5px; }
 
 .task {
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: stretch; }
+  align-items: stretch;
+  background-color: #f9f9f9; }
   .task .date-theme {
     min-height: 40px;
     padding: 0 10px;
