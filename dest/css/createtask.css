@@ -29,7 +29,7 @@
       border-radius: 3px;
       font-family: tahoma;
       resize: none; }
-  .form .keyfunctions input, .form .choosekeywords input, .form .theme input {
+  .form .keyfunctions input, .form .choosekeywords input, .form .theme input, .form .source input, .form .work input {
     margin-bottom: 20px;
     padding: 2px 5px;
     width: 700px;

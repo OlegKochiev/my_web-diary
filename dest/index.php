@@ -26,12 +26,12 @@
                 <div class="theme">
                     <span>
                         <?
-                            echo '#id:'.$mas['id    ']
+                            echo '#id:'.$mas['id']
                         ?>
                     </span>
                     <span>
                         <? 
-                            echo ' Тема: '.$mas['theme']
+                            echo '__ Тема: '.$mas['theme']
                         ?>
                     </span>
                 </div>
@@ -45,31 +45,46 @@
 
 
             </div>
-    
-            <div class="task-description">
-                <p>
-                    <? 
-                        echo $mas['description']
-                    ?>
-                </p>
-            </div>
-
-            <div class="keywords">
-                <ol>
-                    <li>
+            <div class="task-body-cont">
+            
+                <div class="ds-kw-kf-cont">
+                    <div class="task-description">
+                        <p>
+                            <? 
+                                echo $mas['description']
+                            ?>
+                        </p>
+                    </div>
+                    <div class="keywords">
+                        <ol>
+                            <li>
+                                <?
+                                    echo $mas['keywords'];
+                                ?>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="keyfunctions">
+                        <ul>
+                            <?
+                                echo $mas['keyfunctions'];
+                            ?>
+                        </ul>
+                    </div>
+                </div>
+                <div class="resources-container">
+                    <div class="source">
                         <?
-                            echo $mas['keywords'];
+                            echo $mas['source'];
                         ?>
-                    </li>
-                </ol>
-            </div>
-            <div class="keyfunctions">
-                <ul>
-                    <?
-                        echo $mas['keyfunctions'];
-                    ?>
-                </ul>
-            </div>
+                    </div>
+                    <div class="work">
+                        <a href="<?echo $mas['work'];?>">
+                            <?echo $mas['work'];?>
+                        </a>
+                    </div>
+                </div>
+            </div>   
 
         </div>
     <?

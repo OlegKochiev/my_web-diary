@@ -16,11 +16,11 @@ function getDatas(){
     }
     return $mas;
 }
-function setDatas($theme, $description, $keyfunctions, $keywords){
+function setDatas($theme, $description, $keyfunctions, $keywords, $work, $source){
     global $connection;
-    $stm = $connection->prepare('INSERT INTO tasks (theme, description, date, keyfunctions, keywords) 
-                                     VALUES (:th, :de, :dt, :kf, :kw) ');
-    $stm->execute(['th'=>$theme, 'de'=>$description, 'dt'=>date("d M Y H:i:s"), 'kf'=>$keyfunctions, 'kw'=>$keywords]);
+    $stm = $connection->prepare('INSERT INTO tasks (theme, description, date, keyfunctions, keywords, work, source) 
+                                     VALUES (:th, :de, :dt, :kf, :kw, :wk, :sc) ');
+    $stm->execute(['th'=>$theme, 'de'=>$description, 'dt'=>date("d M Y H:i:s"), 'kf'=>$keyfunctions, 'kw'=>$keywords, 'wk'=>$work, 'sc'=>$source]);
 }
 
 ?>
