@@ -14,22 +14,22 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-end; }
+  .form textarea {
+    padding: 2px 5px;
+    width: 700px;
+    height: 250px;
+    border: none;
+    background-color: #f1f1f1;
+    outline: 0;
+    border-radius: 3px;
+    font-family: tahoma;
+    resize: none; }
   .form .task-description {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     margin-bottom: 20px; }
-    .form .task-description textarea {
-      padding: 2px 5px;
-      width: 700px;
-      height: 250px;
-      border: none;
-      background-color: #f1f1f1;
-      outline: 0;
-      border-radius: 3px;
-      font-family: tahoma;
-      resize: none; }
-  .form .keyfunctions input, .form .choosekeywords input, .form .theme input, .form .source input, .form .work input {
+  .form .keyfunctions input[type="text"], .form .choosekeywords input[type="text"], .form .theme input[type="text"], .form .source input[type="text"], .form .work input[type="text"] {
     margin-bottom: 20px;
     padding: 2px 5px;
     width: 700px;
@@ -38,13 +38,46 @@
     border-radius: 3px;
     background-color: #f1f1f1;
     outline: 0; }
-  .form input[type='submit'] {
+  .form input[type='submit'], .form .btn {
+    margin-bottom: 20px;
     padding: 7px 7px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
     background-color: #f1f1f1;
     border: 2px solid #e1e1e1; }
-  .form input[type='submit']:hover {
+  .form input[type='submit']:hover, .form .btn:hover {
     background-color: #e1e1e1;
     border: 2px solid #a1a1a1; }
+  .form .choosekeywords {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 710px; }
+    .form .choosekeywords .selectkeywords {
+      align-self: flex-start;
+      margin-bottom: 20px; }
+      .form .choosekeywords .selectkeywords select {
+        padding: 7px 7px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        background-color: #f1f1f1;
+        border: 2px solid #e1e1e1; }
+    .form .choosekeywords .keywordAdd {
+      margin: 0 auto;
+      width: 500px;
+      display: none;
+      flex-direction: column; }
+      .form .choosekeywords .keywordAdd input, .form .choosekeywords .keywordAdd textarea {
+        width: inherit !important; }
+      .form .choosekeywords .keywordAdd textarea {
+        margin-bottom: 20px;
+        height: 150px; }
+      .form .choosekeywords .keywordAdd .btn-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end; }
+        .form .choosekeywords .keywordAdd .btn-container .btn {
+          margin-left: 20px; }

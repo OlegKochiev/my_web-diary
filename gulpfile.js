@@ -12,7 +12,7 @@ gulp.task('sass', function() {
     .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('default', function() {
+gulp.task('default',['sass'], function() {
     connect.server({}, function (){
       browserSync({
         proxy: '127.0.0.1:8000/app/'
@@ -27,9 +27,12 @@ gulp.task('default', function() {
     gulp.watch('./app/*.html').on('change', function () {
         browserSync.reload();
     });
+    gulp.watch('./app/js/*.js').on('change', function () {
+        browserSync.reload();
+    });
 });
 
 gulp.task('build', function() {
-    return gulp.src(['./app/css/*.css', './app/*.php', './app/*.html', './app/*.js'], {base: './app'})
+    return gulp.src(['./app/css/*.css', './app/js/*.js', './app/*.php', './app/*.html'], {base: './app'})
       .pipe(gulp.dest('./dest/'));
 });

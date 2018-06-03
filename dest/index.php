@@ -16,7 +16,7 @@
         <?php
             require_once('core.php');
 
-            $queryArr = getDatas();
+            $queryArr = $db->getDatas();
             foreach($queryArr as $mas){
         ?>
 

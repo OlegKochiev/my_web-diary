@@ -68,7 +68,8 @@
       .task .task-body-cont .resources-container .source {
         padding: 5px;
         height: 50%;
-        border-bottom: 1px solid #bbb; }
+        border-bottom: 1px solid #bbb;
+        overflow-wrap: break-word; }
       .task .task-body-cont .resources-container .work {
         padding: 5px;
         height: 50%;

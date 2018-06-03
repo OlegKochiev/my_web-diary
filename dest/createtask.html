@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/createtask.css">
+    <script src="js/script.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Создать задачу</title>
 </head>
@@ -21,8 +22,6 @@
                 </label>
                 <input type="text" name="theme" id="" placeholder="Введите название темы">
             </div>
-
-
             <div class="task-description">
                 <label for="theme">
                     Описание:
@@ -33,13 +32,28 @@
                 <label for="theme">
                     Ключевые навыки:
                 </label>
-                <input type="text" name="keyfunctions" id="" placeholder="Введите изученные функции и технологии, например: explode()">
+                <input type="text" name="keyfunctions" id="" placeholder="Введите названия изученных функций и технологии, например: explode()">
             </div>
             <div class="choosekeywords">
-                <label for="keywords">
-                    Ключевые слова:
-                </label>
-                <input type="text" name="keywords" id="" placeholder="Введите ключевые слова, например: git, php5.3, mysql">
+                <div class="selectkeywords">
+                    <select name="keywords_sel" id="keywords_sel" onchange="keywordSel(this)">
+                        <option selected disabled>Выберите слово:</option>
+                        <option value="1">php</option>
+                        <option value="2">mySql</option>
+                        <option value="add_new" onclick="addNewClick()">Добавить новое..</option>
+                    </select>
+                    <label id="sel_labe" for="keywords_sel">Ключевые слова: </label> 
+                </div>
+                <div class="keywordAdd" id="keywordAdd">
+                    <label for="keywords">Введите имя и описание нового ключевого слова:</label>
+                    <input type="text" name="keywords" id="keyWordName" placeholder="Введите название ключевого слова, например: git">
+                    <textarea name="keyword-description" id="keyWordDesc" placeholder="Опишите ключевое слово" class="keyword-description"></textarea>
+                    <div class="btn-container">
+                        <input type="button" value="Добавить" class="btn" onclick="addbtn()">
+                        <input type="button" value="Отменить" class="btn" onclick="cancelbtn()">
+                    </div>
+                </div>
+                <input type="hidden" name="keywords_selected" id="hidArr" value=",">
             </div>
             <div class="source">
                 <label for="source">
